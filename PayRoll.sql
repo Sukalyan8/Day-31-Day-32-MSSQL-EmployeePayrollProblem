@@ -26,7 +26,7 @@ select salary from employee_payroll where startDate BETWEEN Cast('2021-08-19' as
 
 
 
---uc-6 add column gender and upadate values
+--uc-6 add column gender and update values
 Alter table employee_payroll
 add Gender char(1);
 
@@ -38,7 +38,7 @@ set Gender='F'
 where name='Rasmita' or name='Runu'or name='Rakshi';
 
 
---uc-7 Aggregate function anfd Gruop by gender
+--uc-7 Aggregate function and Gruop by gender
 select Sum(salary) as "TotalSalary",Gender from employee_payroll group by Gender;
 select Avg(salary) as "AverageSalary",Gender from employee_payroll group by Gender;
 select Min(salary) as "MinimumSalary",Gender from employee_payroll group by Gender;
